@@ -1,18 +1,299 @@
----
-layout: default
----
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <title>我的工作台</title>
+        <meta charset="utf-8">
+            <meta name="renderer" content="webkit"/>
+            <meta name="description" content="我的工作台"/>
+            <meta name="viewport"
+                content="width=device-width, viewport-fit=cover, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+                <link rel="shortcut icon" href="/favicon.ico">
+                    <link rel="stylesheet" href="/asset/dep/icomoon/style-ba43dd96a4.css"/>
+                    <style type="text/css">
+                        @font-face {
+                            font-family: "SourceSansPro";
+                            src: url("/asset/dep/font/SourceSansPro-Regular.ttf");
+                        }
+                    </style>
+                    <link rel="stylesheet" href="/asset/css/share/view-3b35dbe749.css"/>
+                    <div id='wx_pic' style='display:none;'>
+                        <img src="https://mubu.com/photo/85fa5308-ec1f-4548-b662-99c2d606694d.jpg@300w_300h"/>
+                    </div>
+                    <script>
+                        window.revision = {
+                            env: 'prod',
+                            version: '1.0.0.807',
+                            revision: 'd8e37d0bdf67a53dbef0b4fe0ff43e98f6ed106c',
+                            pubDate: '2019-10-14 17',
+                        }
+                    </script>
+    </head>
+    <body>
+        <div class="view-header">
+            <a href="/" class="site">
+                <img src="/asset/img/logo/text-0f5be2e426.png" alt="" rel="nofollow"/>
+            </a>
+            <div class="view-nav">
+                <a href="/explore">幕布精选</a>
+            </div>
+            <div class="split"></div>
+            <div class="right">
+                <div id="edit-it" class="main-btn">
+                    <span class="view-btn">在我的幕布编辑</span>
+                </div>
+                <div class="split"></div>
+                <div id="toolbar-mind" class="operate" title="查看思维导图">
+                    <i class="icon icon-mind-o"></i>
+                </div>
+                <div id="toolbar-play" class="operate line-right" title="演示模式">
+                    <i class="icon icon-demo"></i>
+                </div>
+                <div id="toolbar-share" class="operate" title="分享">
+                    <i class="icon icon-share-rect"></i>
+                </div>
+                <div class="split"></div>
+                <a href="/list">
+                    <span class="header-photo-wrapper">
+                        <img class="photo" src="https://mubu.com/photo/85fa5308-ec1f-4548-b662-99c2d606694d.jpg@50w_50h"/>
+                    </span>
+                    alex
+                </a>
+            </div>
+        </div>
+        <div class="header-position"></div>
+        <div id="scroll-content" >
+            <div id="paper">
+                <div id="demo-screen" class="reading">
+                    <div class="scrollable">
+                        <div class="demo-wrapper">
+                            <div class="header">
+                                <div class="title"></div>
+                                <div class="paper-dir"></div>
+                            </div>
+                            <div class="node-tree"></div>
+                        </div>
+                    </div>
+                    <div class="demo-menu">
+                        <ul class="menu-list">
+                            <li id="demo-mode">
+                                <i class="icon icon-moon"></i>
+                            </li>
+                            <li id="demo-zoomin">
+                                <i class="icon icon-zoom-in"></i>
+                            </li>
+                            <li id="demo-zoomout">
+                                <i class="icon icon-zoom-out"></i>
+                            </li>
+                            <li id="demo-exit">
+                                退出
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="complaints">
+                <span id="complaint-label">举报</span>
+            </div>
+            <div class="view-info">
+                <div class="row">
+                    <span class="author-info" id="author-info">
+                        <span class="label">
+                            <img class="photo" src="https://mubu.com/photo/85fa5308-ec1f-4548-b662-99c2d606694d.jpg@50w_50h"/>
+                        </span>
+                        <span class="text">alex</span>
+                    </span>
+                </div>
+                <div class="row view-count">
+                    <span class="label">
+                        <span class="icon-box">
+                            <i class="icon icon-view"></i>
+                        </span>
+                    </span>
+                    <span class="text light pc">182次阅读</span>
+                    <span class="text light mobile">阅读：182</span>
+                </div>
+                <div class="row view-time">
+                    <span class="label">
+                        <span class="icon-box" title="最后编辑">
+                            <i class="icon icon-calendar"></i>
+                        </span>
+                    </span>
+                    <span class="text light pc">2019-10-14</span>
+                    <span class="text light mobile">日期：2019-10-14</span>
+                </div>
+                <div class="row view-shortcuts">
+                    <span class="label">
+                        <span class="icon-box">
+                            <i class="icon icon-expand-collapse"></i>
+                            <div class="menu">
+                                <ul>
+                                    <!-- 内容会在客户端填充 -->
+                                </ul>
+                            </div>
+                        </span>
+                    </span>
+                    <span class="text light pc">收缩/展开主题</span>
+                    <span class="text light mobile">收缩/展开主题</span>
+                </div>
+            </div>
+        </div>
+        <div class="show-op-mask"></div>
+        <div id="comment-op">
+            <div id="comment-news" title="">
+                <div>
+                    <i class="icon icon-comment-o"></i>
+                </div>
+                <span class="comment-count">0</span>
+                <div class="tip"><span class="pointer"></span>评论</div>
+            </div>
+            <div id="doc-praise" class="line" title="">
+                <div class="operate-icon">
+                    <i class="icon icon-praise-o"></i>
+                </div>
+                <span class="comment-count" id="doc-praise-count">0</span>
+                <div class="tip"><span class="pointer"></span>点赞</div>
+            </div>
+            <div id="doc-collect" class="line" title="">
+                <div class="operate-icon">
+                    <i class="icon icon-star"></i>
+                </div>
+                <span class="comment-count" id="doc-collect-count">0</span>
+                <div class="tip"><span class="pointer"></span>收藏</div>
+            </div>
+        </div>
+        <div id="space-ruler"></div>
+        <div id="explore-comment">
+            <div class="content">
+                <h3 id="comment-title">评论 <span class="icon icon-close" id="close-comment-list"></span></h3>
+                <div class="comment-wrapper">
+                    <div class="header">
+                        <textarea placeholder="谈谈您对此文档的看法" id="comment-info" cols="30" rows="10"
+                            class="text"></textarea>
+                        <div class="comment">
+                            <div id="comment-submit" class="button dark small">发表评论</div>
+                        </div>
+                    </div>
+                    <div id="comment-content"></div>
+                    <p id="comment-more">加载更多</p>
+                </div>
+            </div>
+        </div>
+        <div id="personal-info">
+            <div class="info-close"><i class="icon icon-close"></i></div>
+            <div class="header">
+                <div class="portrait">
+                </div>
+                <div class="detail">
+                    <div class="name">加载中...</div>
+                    <ul class="info">
+                        <li><div>精选作品</div></li>
+                        <li><div>收获赞</div></li>
+                        <li><div>总阅读</div></li>
+                        <li><div>总收藏</div></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="title">TA分享的精选作品</div>
+                <ul class="list-container">
+                </ul>
+            </div>
+        </div>
+        <div id="save-result" class="dlg">
+            <div class="header">保存成功</div>
+            <div class="body">
+                已成功保存为您的文档，您现在可以对其进行编辑
+            </div>
+            <div class="buttons">
+                <span id="save-view-btn" class="button dark small">立即查看</span>
+                <div class="button light small" onclick="$('#save-result').dlg('close')">关闭</div>
+            </div>
+        </div>
+        <div id="explore-share" class="dlg">
+            <div class="header">分享文档</div>
+            <div class="body">
+                <div class="share">
+                    <div class="qrcode">
+                        <div class="qrcode-desc">
+                            文档二维码，手机扫一扫
+                        </div>
+                        <div id="share-qrcode"></div>
+                    </div>
+                    <div class="platform">
+                        <div class="platform-desc">
+                            分享文档到
+                        </div>
+                        <div class="share-platform">
+                            <a id="share-weibo" href="" target="_blank">
+                                <i class="icon icon-weibo"></i>
+                            </a>
+                            <a id="share-qq" href="" target="_blank">
+                                <i class="icon icon-qq"></i>
+                            </a>
+                            <a id="share-qzone" href="" target="_blank">
+                                <i class="icon icon-qzone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="comment-reply" class="dlg">
+            <div class="header">回复评论</div>
+            <div class="body">
+                <textarea placeholder="回复某某某：" id="reply-comment" cols="30" rows="10" class="text"></textarea>
+            </div>
+            <div class="buttons">
+                <div id="comment-reply-submit" class="button dark">发表</div>
+            </div>
+        </div>
+        <div id="complaints-dialog" class="dlg">
+            <div class="header">举报</div>
+            <div class="body">
+                <div class="phone">
+                    <span id="label">您的手机号：</span>
+                    <input id="comp-phone" type="number" class="text small" placeholder="输入您的手机号，可不填">
+                </div>
+                <div class="qq-mail">
+                    <span id="label">您的邮箱：</span>
+                    <input id="comp-qq-mail" class="text small" placeholder="输入您的邮箱，可不填">
+                </div>
+                <div class="document-link">
+                    <span id="label">文档链接：</span>
+                    <input id="comp-document-link" disabled="disabled" class="text small">
+                </div>
+                <div class="content">
+                    <span id="label">举报内容：</span>
+                    <textarea id="comp-summary" cols="30" rows="5" class="text small"
+                        placeholder="请输入对举报内容的描述，帮助我们核实处理"></textarea>
+                </div>
+            </div>
+            <div class="buttons">
+                <div id="complaints-save-btn" class="button dark">提交</div>
+            </div>
+        </div>
+        <div class="mask-author"></div>
+        <script>
+            var docId = 'qhFDGC6_Bu';
+            var viewLevel = 0;
+            var authorId = '3684830';
+            var isApp = false;
+            </script>
+        <script>var asset_origin = '/asset'; var cdn_origin = 'https://mubu.com/';</script>
+        <script src="/asset/dep/base-0780b52f29.js"></script>
+        <script src="/asset/js/common/ui-3a811cbcfc.js"></script>
+        <script>var curUID = '3684830';</script>
+        <script src="/asset/js/share/view-0f60ede059.js"></script>
+        <script>
+            if (location.host.indexOf('mubu.io') >= 0 || location.host.indexOf('mubu.com') >= 0) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+                 ga('create', 'UA-77727571-1', 'auto');
+                 ga('send', 'pageview');
+            }
+        </script>
+    </body>
+</html>
